@@ -1,4 +1,5 @@
 <?php
+namespace MieClassi;
 $stringa ='<section class="fotolavori">
 <div class="card">
     <h4>LAVORO 1</h4>
@@ -27,7 +28,6 @@ $stringa ='<section class="fotolavori">
     <a href="./progetto6.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro6" title="lavoro6"></a>
 </div>
 </section>';
-namespace MieClassi;
 
 /**
  * questa classe contiene tutti i metodi utili
