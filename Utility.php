@@ -1,5 +1,32 @@
 <?php
-
+$stringa ='<section class="fotolavori">
+<div class="card">
+    <h4>LAVORO 1</h4>
+<a href="./progetto1.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro1" title="lavoro1"></a>
+</div>
+<div class="card">
+    <h4>LAVORO 2</h4>
+<a href="./progetto2.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro2" title="lavoro2"></a>
+</div>
+<div class="card">
+    <h4>LAVORO 3</h4>
+<a href="./progetto3.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro3" title="lavoro3"></a>
+</div>
+</section>
+<section class="fotolavori">
+<div class="card">
+    <h4>LAVORO 4</h4>
+    <a href="./progetto4.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro4" title="lavoro4"></a>
+    </div>
+    <div class="card">
+        <h4>LAVORO 5</h4>
+    <a href="./progetto5.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro5" title="lavoro5"></a>
+    </div>
+    <div class="card">
+        <h4>LAVORO 6</h4>
+    <a href="./progetto6.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro6" title="lavoro6"></a>
+</div>
+</section>';
 namespace MieClassi;
 
 /**
