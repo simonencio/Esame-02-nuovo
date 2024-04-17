@@ -5,7 +5,7 @@ require_once('Utility.php');
 
 use MieClassi\Utility as UT;
 
-$file = "menuLaterale.json";
+$file = "progetti.json";
 $arr = json_decode(UT::leggiTesto($file));
 $selezionato = UT::richiestaHTTP("selezionato");
 $selezionato = ($selezionato == null) ? 1 : $selezionato;
