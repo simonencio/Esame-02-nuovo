@@ -28,6 +28,18 @@ $stringa ='<section class="fotolavori">
     <a href="./progetto6.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro6" title="lavoro6"></a>
 </div>
 </section>';
+$stringa2 = ('<div class="testo">
+<h2>Creazione di siti web responsive</h2>
+<p>Uno tra i tanti lavori che effettuiamo consiste nella creazione di siti web responsive,<br> 
+cioè in grado di adattarsi a computer, smartphone e tablet.<br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum<br> 
+has been the industries standard dummy text ever since the 1500s, when an unknown printer<br>
+ took a galley of type and scrambled it to make a type specimen book. It has survived not<br>
+  only five centuries, but also the leap into electronic typesetting, remaining essentially<br>
+   unchanged. It was popularised in the 1960s with the release of Letraset sheets containing<br>
+    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker<br>
+     including versions of Lorem Ipsum.</p>
+</div>');
 
 /**
  * questa classe contiene tutti i metodi utili

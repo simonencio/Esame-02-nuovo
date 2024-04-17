@@ -1,3 +1,16 @@
+<?php
+ini_set("auto_detect_line_endings", true);
+
+require_once('Utility.php');
+
+use MieClassi\Utility as UT;
+
+$file = "progetti.json";
+$arr = json_decode(UT::leggiTesto($file));
+$selezionato = UT::richiestaHTTP("selezionato");
+$selezionato = ($selezionato == null) ? 1 : $selezionato;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,50 +36,21 @@
             
         <section class="progetto">
             <img src="./immagini/realizzazione-siti-web-alberto-pozzi-monza.jpg" alt="lavoro1" title="lavoro1">
-            <div class="testo">
-                <h2>Creazione di siti web responsive</h2>
-            <p>Uno tra i tanti lavori che effettuiamo consiste nella creazione di siti web responsive,<br> 
-                cioè in grado di adattarsi a computer, smartphone e tablet.<br>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum<br> 
-                has been the industry's standard dummy text ever since the 1500s, when an unknown printer<br>
-                 took a galley of type and scrambled it to make a type specimen book. It has survived not<br>
-                  only five centuries, but also the leap into electronic typesetting, remaining essentially<br>
-                   unchanged. It was popularised in the 1960s with the release of Letraset sheets containing<br>
-                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker<br>
-                     including versions of Lorem Ipsum.</p>
-        </div>    
+            <?php
+            printf($stringa2);
+            ?>
         </section>
         <div class="title">
             <h1>Vedi Altri Progetti</h1>
         </div>
-            <section class="fotolavori">
-                <div class="card">
-                    <h4>LAVORO 1</h4>
-                <a href="./progetto1.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro1" title="lavoro1"></a>
-                </div>
-                <div class="card">
-                    <h4>LAVORO 2</h4>
-                <a href="./progetto2.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro2" title="lavoro2"></a>
-                </div>
-                <div class="card">
-                    <h4>LAVORO 3</h4>
-                <a href="./progetto3.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro3" title="lavoro3"></a>
-                </div>
-            </section>
-            <section class="fotolavori">
-                <div class="card">
-                    <h4>LAVORO 4</h4>
-                    <a href="./progetto4.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro4" title="lavoro4"></a>
-                    </div>
-                    <div class="card">
-                        <h4>LAVORO 5</h4>
-                    <a href="./progetto5.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro5" title="lavoro5"></a>
-                    </div>
-                    <div class="card">
-                        <h4>LAVORO 6</h4>
-                    <a href="./progetto6.php" target="_blank"><img src="./immagini/webdesign.jpg" alt="lavoro6" title="lavoro6"></a>
-                </div>
-            </section>
+        <?php
+        foreach ($arr as $link) {
+            $n = $link->id;
+            $classeSelezionato = ($n == $selezionato) ? 'class="selezionato"' : '';
+            printf($stringa, $classeSelezionato, $link->url, $link->id, $link->title, $link->nome);
+            if ($n == 1) break;
+        }
+        ?>
         </main>
         <?php include 'footer.php';
         echo generateFooter();
