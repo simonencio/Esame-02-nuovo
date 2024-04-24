@@ -13,6 +13,7 @@ $selezionato = ($selezionato == null) ? 1 : $selezionato;
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +21,10 @@ $selezionato = ($selezionato == null) ? 1 : $selezionato;
     <link rel="stylesheet" href="./css/STYLE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
-    <?php include 'header.php';
+        <?php include 'header.php';
         echo generateHeaderAndVideo();
         ?>
         <div class="intro">
@@ -33,17 +35,29 @@ $selezionato = ($selezionato == null) ? 1 : $selezionato;
         <div class="title">
             <h1>Lavori</h1>
         </div>
-        <?php
-        foreach ($arr as $link) {
-            $n = $link->id;
-            $classeSelezionato = ($n == $selezionato) ? 'class="selezionato"' : '';
-            printf($stringa, $classeSelezionato, $link->url, $link->id, $link->title, $link->nome);
-            if ($n == 1) break;
-        }
-        ?>
-        </main>
-        <?php include 'footer.php';
-        echo generateFooter();
-        ?>
-    </body>
-    </html>
+        <section class="fotolavori">
+
+            <ul class="lavori">
+
+                <?php
+                foreach ($arr as $link) {
+                    $n = $link->id;
+                    $classeSelezionato = ($n == $selezionato) ? 'class="selezionato"' : '';
+                    $image_url = isset($link->image_url) ? $link->image_url : '';
+                    printf('<li %s><a href="%s?selezionato=%u" title="%s" ><img class="portfolio-image" src="./immagini/%s" alt="%s" /><h2>%s</h2></a></li>', $classeSelezionato, $link->url, $link->id, isset($link->image_title) ? $link->image_title : '', $image_url, isset($link->image_title) ? $link->image_title : '', $link->nome);
+                    $counter++;
+                    if ($counter == 3) {
+                        echo '</ul></section><section class="fotolavori"><ul class="lavori">';
+                    }
+                }
+                ?>
+
+            </ul>
+        </section>
+    </main>
+    <?php include 'footer.php';
+    echo generateFooter();
+    ?>
+</body>
+
+</html>

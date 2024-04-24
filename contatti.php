@@ -67,7 +67,7 @@
         </section>
     </section>
     <section class="serious">
-    <form id="form-01" action="./invioform.php" method="POST">
+    <form id="form-01" action="./invioform.php" method="POST" novalidate>
     <h3>Contattaci:</h3>
     <fieldset>
       <label>Dati anagrafici</label>
