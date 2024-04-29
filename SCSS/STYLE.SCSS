@@ -103,8 +103,8 @@ header {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 35px;
-    margin-bottom: 25px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 
     h1 {
       font-size: 2em;
@@ -129,7 +129,6 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 0;
     margin-top: 50px;
     margin-bottom: 50px;
 
@@ -149,8 +148,8 @@ main {
 
     ul.lavori li {
       img {
-        width: 300px;
-        height: 150px;
+        width: 400px;
+        height: 200px;
         border: 3px solid blue;
         border-radius: 10px;
 
@@ -176,7 +175,36 @@ main {
 
     }
   }
+  div.Home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
+    a{
+    margin: 25px;
+    } 
+  img{
+  width: 300px;
+  height: 150px;
+  border: 3px solid blue;
+  border-radius: 10px;
+    
+    &:hover{
+    border: 2px solid blue;
+    opacity: 0.5;
+    }
+  }
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    }
+}
   section.progetto {
     display: flex;
     flex-direction: row;
@@ -471,15 +499,24 @@ footer {
   main div.title {
     font-size: 15px;
   }
+  main section.fotolavori ul.lavori {
+    width: auto;
+    padding: 0;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
 
-  main section.fotolavori {
+  }
+
+  main div.Home{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  main section.fotolavori img {
+  main div.Home img {
     width: 300px;
     height: 150px;
   }
