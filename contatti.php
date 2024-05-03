@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contatti</title>
-    <link rel="stylesheet" href="./css/STYLE.min.css">
+    <link rel="stylesheet" href="./CSS/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -20,7 +20,7 @@
         <div class="title">
             <h1>I Nostri Contatti:</h1>
         </div>
-        <div class="all">
+        <section class="all">
             <div class="contatti">
                 <img src="./immagini/205440980-contattaci-o-la-hotline-dell-assistenza-clienti-le-persone-connettono-l-uomo-che-tocca-l-accesso-ai.jpg" alt="lavoro2" title="lavoro2">
             </div>
@@ -65,7 +65,7 @@
                         </address>
             </div>
 </div>
-</div>
+        </section>
     <section class="serious">
     <form id="form-01" action="./invioform.php" method="POST" novalidate>
     <h3>Contattaci:</h3>

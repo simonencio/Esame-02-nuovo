@@ -11,11 +11,11 @@ function generateHeaderAndVideo() {
     <input type="checkbox" id="check">
     <div class="menu">
     <ul class="nav-bar">
-    <li class="logo"><a href="./index.html"><img src="./immagini/verologo.jpg" alt="logo"></a></li>
-                <li><a href="./index.php" target="_blank">HOME PAGE</a></li>
-                <li><a href="./chisiamo.php" target="_blank">CHI SIAMO?</a></li>
-                <li><a href="./portfolio.php" target="_blank">PORTFOLIO</a></li>
-                <li><a href="./contatti.php" target="_blank">CONTATTI</a></li>
+    <li class="logo"><a href="./index.php"><img src="./immagini/verologo.jpg" alt="logo"></a></li>
+                <li><a href="./index.php">HOME PAGE</a></li>
+                <li><a href="./chisiamo.php">CHI SIAMO?</a></li>
+                <li><a href="./portfolio.php">PORTFOLIO</a></li>
+                <li><a href="./contatti.php">CONTATTI</a></li>
                 </ul>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </div>
